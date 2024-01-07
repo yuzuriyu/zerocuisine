@@ -27,7 +27,7 @@ export default function Gallery() {
             Fresh Fruit
           </p>
           <p className="text-gray-500 text-xs text-center">
-            myday myday ka pa di mo man lang ako ma replyan ayos ah hahahah
+            Juicy, ripe fruits bursting with flavor.
           </p>
         </div>
         <div>
@@ -36,7 +36,7 @@ export default function Gallery() {
             Premium Quality
           </p>
           <p className="text-gray-500 text-xs text-center">
-            myday myday ka pa di mo man lang ako ma replyan ayos ah hahahah
+            Exceptional quality, premium culinary experience.
           </p>
         </div>
         <div>
@@ -45,7 +45,7 @@ export default function Gallery() {
             Seasonal Vegetables
           </p>
           <p className="text-gray-500 text-xs text-center">
-            myday myday ka pa di mo man lang ako ma replyan ayos ah hahahah
+            Fresh, seasonal veggies for delightful dining.
           </p>
         </div>
       </div>

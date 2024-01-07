@@ -13,7 +13,7 @@ export default function Testimonial() {
         setCurrentIndex((prevIndex) =>
           prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
         );
-      }, 8000); // Set the duration here (in milliseconds)
+      }, 10000); // Set the duration here (in milliseconds)
 
       return () => clearInterval(intervalId); // Clear interval on component unmount
     }
@@ -39,13 +39,13 @@ export default function Testimonial() {
     <div className="w-11/12 m-auto py-20 md:w-10/12">
       <div className="testimonial-carousel">
         <div className="md:w-[80%] relative">
-          <p className="font-bold text-2xl font-playfair my-10">
+          <p className=" text-2xl font-playfair my-10">
             {testimonials[currentIndex].statement}
           </p>
           <img
             src={quotationMark}
             alt=""
-            className="absolute right-0 -top-10 w-36"
+            className="absolute right-0 -top-10 w-36 -z-10"
           />
         </div>
         <div className="flex justify-between w-full items-center">

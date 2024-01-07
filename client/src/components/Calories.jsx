@@ -1,7 +1,6 @@
 import React from "react";
 import image7 from "../assets/image-7.png";
-import image8 from "../assets/image-8.png";
-import image9 from "../assets/image-9.png";
+import { Link } from "react-router-dom";
 
 export default function Calories() {
   return (
@@ -10,31 +9,52 @@ export default function Calories() {
         Calories Energy Balance
       </h1>
       <p className="text-gray-500 text-xs text-center">
-        hanggang kelan ba ako ganto
+        Nutrient-rich, fresh fruit for a healthy indulgence.
       </p>
 
       <div className="grid grid-cols-2 my-10 gap-4 md:gap-8 md:grid-cols-3">
-        <div className="relative">
-          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2">
-            <p className="text-lg">Starters</p>
-            <p className="text-lg">→</p>
+        <Link
+          to={"/portfolio"}
+          className="relative hover:opacity-75 cursor-pointer"
+        >
+          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2 z-10">
+            <p className="text-lg text-white">Starters</p>
+            <p className="text-lg text-white">→</p>
           </div>
-          <img src={image7} alt="" className="object-cover" />
-        </div>
-        <div className="relative">
-          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2">
-            <p className="text-lg">Mains</p>
-            <p className="text-lg">→</p>
+          <img
+            src={image7}
+            alt=""
+            className="object-cover brightness-75 h-full"
+          />
+        </Link>
+        <Link
+          to={"/portfolio"}
+          className="relative hover:opacity-75 cursor-pointer"
+        >
+          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2 z-10">
+            <p className="text-lg text-white">Sweets</p>
+            <p className="text-lg text-white">→</p>
           </div>
-          <img src={image8} alt="" className="object-cover" />
-        </div>
-        <div className="relative">
-          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2">
-            <p className="text-lg">Soups</p>
-            <p className="text-lg">→</p>
+          <img
+            src="https://i0.hippopx.com/photos/368/48/882/the-cake-dessert-eating-bun-thumb.jpg"
+            alt=""
+            className="object-cover brightness-75 h-full"
+          />
+        </Link>
+        <Link
+          to={"/portfolio"}
+          className="relative hover:opacity-75 cursor-pointer"
+        >
+          <div className="flex justify-between absolute top-4 w-10/12 left-1/2 -translate-x-1/2 z-10">
+            <p className="text-lg text-white">Fruits</p>
+            <p className="text-lg text-white">→</p>
           </div>
-          <img src={image9} alt="" className="object-cover" />
-        </div>
+          <img
+            src="https://insanelygoodrecipes.com/wp-content/uploads/2021/07/Cranberry-Canape-with-Fruits-and-Cream-Cheese.jpg"
+            alt=""
+            className="object-cover brightness-75 h-full"
+          />
+        </Link>
       </div>
     </div>
   );

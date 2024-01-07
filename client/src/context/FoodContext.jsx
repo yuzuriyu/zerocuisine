@@ -3,28 +3,55 @@ import { createContext, useState, useEffect } from "react";
 const FoodContext = createContext();
 
 const FoodContextProvider = ({ children }) => {
-  const [apiData, setApiData] = useState([]);
-  const [menu, setMenu] = useState([]);
+  const [starters, setStarters] = useState([]);
   const [testimonials, setTestimonials] = useState();
-  console.log(testimonials);
+  const [openTime, setOpenTime] = useState([]);
+  const [blog, setBlog] = useState([]);
+  const [lunch, setLunch] = useState([]);
+  const [dinner, setDinner] = useState([]);
+  const [drinks, setDrinks] = useState([]);
+  const [sweets, setSweets] = useState([]);
+  const [fruits, setFruits] = useState([]);
+  const [apiData, setApiData] = useState([]);
+  const [selectedFood, setSelectedFood] = useState(null);
+
+  const selectFood = (foodID) => {
+    setSelectedFood(foodID);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       await fetch("http://localhost:5000/zerocuisineapi")
         .then((response) => response.json())
         .then((data) => {
-          setApiData(data);
-          setMenu(data.restaurant.menu);
+          setApiData(data.restaurant);
           setTestimonials(data.restaurant.testimonials);
+          setStarters(data.restaurant.starters);
+          setOpenTime(data.restaurant.openTime);
+          setBlog(data.restaurant.blog);
+          setLunch(data.restaurant.lunch);
+          setDinner(data.restaurant.dinner);
+          setDrinks(data.restaurant.drinks);
+          setSweets(data.restaurant.sweets);
+          setFruits(data.restaurant.fruits);
         });
     };
     fetchData();
   }, []);
 
   const value = {
-    apiData,
-    menu,
     testimonials,
+    starters,
+    drinks,
+    sweets,
+    openTime,
+    dinner,
+    fruits,
+    lunch,
+    blog,
+    selectedFood,
+    selectFood,
+    setSelectedFood,
   };
 
   return <FoodContext.Provider value={value}>{children}</FoodContext.Provider>;

@@ -1,12 +1,10 @@
 import React from "react";
-import image1 from "../assets/image-1.png";
-import image2 from "../assets/image-2.png";
-import image3 from "../assets/image-3.jpg";
 import image4 from "../assets/image-4.jpg";
+import { Link } from "react-router-dom";
 
-export default function Hero() {
+export default function Hero(props) {
   return (
-    <div className="w-full h-screen m-auto">
+    <div className="w-full h-[90vh] m-auto">
       <img
         src={image4}
         alt=""
@@ -23,10 +21,15 @@ export default function Hero() {
           to a dining experience that transcends expectations.
         </p>
         <div className="flex text-center justify-center gap-4 my-10">
-          <button className="text-white border border-white px-4 py-2">
-            VIEW MENU
-          </button>
-          <button className="text-white bg-yellow-600 px-4 py-2">
+          <Link to={"/menu"}>
+            <button className="text-white border border-white px-4 py-2">
+              VIEW MENU
+            </button>
+          </Link>
+          <button
+            className="text-white bg-yellow-600 px-4 py-2 hover:bg-yellow-700"
+            onClick={() => props.scrollIntoView()}
+          >
             RESERVATION
           </button>
         </div>
