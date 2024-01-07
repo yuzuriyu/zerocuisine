@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero(props) {
   return (
-    <div className="w-full h-[90vh] m-auto">
+    <div className="w-full h-[90vh] m-auto relative">
       <img
         src={image4}
         alt=""
