@@ -35,26 +35,37 @@ export default function Portfolio() {
       </div>
       <div className="flex justify-center w-11/12 m-auto md:w-10/12 flex-col gap-4 md:gap-0 pb-8 pt-20 md:flex-row">
         <div className="flex justify-center md:justify-normal">
-          <p className="mr-4 relative group" onClick={() => setCategory("all")}>
+          <p
+            className={`mr-4 relative group ${
+              activeCategory === "all" ? "border-b border-black" : ""
+            }`}
+            onClick={() => setCategory("all")}
+          >
             All
             <div className="w-0 absolute transition-all ease-in-out duration-300 border-b border-black group-hover:w-full"></div>
           </p>
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "starters" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("starters")}
           >
             Starters
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
           </p>
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "lunch" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("lunch")}
           >
             Lunch
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
           </p>
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "dinner" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("dinner")}
           >
             Dinner
@@ -63,21 +74,27 @@ export default function Portfolio() {
         </div>
         <div className="flex justify-center md:justify-normal ">
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "drinks" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("drinks")}
           >
             Drinks
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
           </p>
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "sweets" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("sweets")}
           >
             Sweets
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
           </p>
           <p
-            className="mr-4 relative group"
+            className={`mr-4 relative group ${
+              activeCategory === "fruits" ? "border-b border-black" : ""
+            }`}
             onClick={() => setCategory("fruits")}
           >
             Fruits
