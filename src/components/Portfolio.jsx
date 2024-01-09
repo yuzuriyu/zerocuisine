@@ -35,7 +35,7 @@ export default function Portfolio() {
       </div>
       <div className="flex justify-center w-11/12 m-auto md:w-10/12 flex-col gap-4 md:gap-0 pb-8 pt-20 md:flex-row">
         <div className="flex justify-center md:justify-normal">
-          <p
+          <div
             className={`mr-4 relative group ${
               activeCategory === "all" ? "border-b border-black" : ""
             }`}
@@ -43,8 +43,8 @@ export default function Portfolio() {
           >
             All
             <div className="w-0 absolute transition-all ease-in-out duration-300 border-b border-black group-hover:w-full"></div>
-          </p>
-          <p
+          </div>
+          <div
             className={`mr-4 relative group ${
               activeCategory === "starters" ? "border-b border-black" : ""
             }`}
@@ -52,8 +52,8 @@ export default function Portfolio() {
           >
             Starters
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
-          </p>
-          <p
+          </div>
+          <div
             className={`mr-4 relative group ${
               activeCategory === "lunch" ? "border-b border-black" : ""
             }`}
@@ -61,8 +61,8 @@ export default function Portfolio() {
           >
             Lunch
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
-          </p>
-          <p
+          </div>
+          <div
             className={`mr-4 relative group ${
               activeCategory === "dinner" ? "border-b border-black" : ""
             }`}
@@ -70,10 +70,10 @@ export default function Portfolio() {
           >
             Dinner
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
-          </p>
+          </div>
         </div>
         <div className="flex justify-center md:justify-normal ">
-          <p
+          <div
             className={`mr-4 relative group ${
               activeCategory === "drinks" ? "border-b border-black" : ""
             }`}
@@ -81,8 +81,8 @@ export default function Portfolio() {
           >
             Drinks
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
-          </p>
-          <p
+          </div>
+          <div
             className={`mr-4 relative group ${
               activeCategory === "sweets" ? "border-b border-black" : ""
             }`}
@@ -90,8 +90,8 @@ export default function Portfolio() {
           >
             Sweets
             <div className="w-0 group-hover:w-full absolute border-b border-black transition-all ease-out duration-300"></div>
-          </p>
-          <p
+          </div>
+          <div
             className={`mr-4 relative group ${
               activeCategory === "fruits" ? "border-b border-black" : ""
             }`}
@@ -99,7 +99,7 @@ export default function Portfolio() {
           >
             Fruits
             <div className="w-0 absolute transition-all ease-in-out duration-300 border-b border-black group-hover:w-full"></div>
-          </p>
+          </div>
         </div>
       </div>
       <div className="w-11/12 m-auto grid grid-cols-1 pb-20 gap-10 md:w-10/12 md:grid-cols-2 lg:grid-cols-3">

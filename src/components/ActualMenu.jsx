@@ -40,7 +40,7 @@ export default function ActualMenu() {
           </div>
           <div className="grid grid-cols-1 gap-4 md:gap-8">
             {filteredStarters.map((data, index) => (
-              <div>
+              <div key={index}>
                 <p className="border-b border-dotted border-black text-right">
                   ${data.price}
                 </p>
@@ -61,7 +61,7 @@ export default function ActualMenu() {
         <div className="flex flex-col md:flex-row gap-10 items-start justify-end">
           <div className="grid grid-cols-1 gap-4 md:gap-8">
             {filteredDinner.map((data, index) => (
-              <div>
+              <div key={index}>
                 <p className="border-b border-dotted border-black text-right">
                   ${data.price}
                 </p>
@@ -85,7 +85,7 @@ export default function ActualMenu() {
         <div className="flex flex-col md:flex-row gap-10 items-start">
           <div className="grid grid-cols-1 gap-4 md:gap-8">
             {filteredDrinks.map((data, index) => (
-              <div>
+              <div key={index}>
                 <p className="border-b border-dotted border-black text-right">
                   ${data.price}
                 </p>
