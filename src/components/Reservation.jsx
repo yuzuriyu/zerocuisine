@@ -39,7 +39,7 @@ export default function Reservation(props) {
           placeholder="Date"
         />
         <select className="py-2 border text-gray-500 px-4">
-          <option value="" disabled selected>
+          <option value="" disabled defaultValue="">
             Select Reservation Time
           </option>
           {hours.map((time) => (
@@ -50,7 +50,7 @@ export default function Reservation(props) {
         </select>
 
         <select className="text-gray-500 border py-2 px-4">
-          <option value="" disabled selected>
+          <option value="" disabled defaultValue="">
             Select Reservation Quantity
           </option>
           {reservationNum.map((qty) => (
