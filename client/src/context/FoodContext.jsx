@@ -21,7 +21,7 @@ const FoodContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("http://localhost:5000/zerocuisineapi")
+      await fetch("/.netlify/functions/zerocuisineapi")
         .then((response) => response.json())
         .then((data) => {
           setApiData(data.restaurant);
