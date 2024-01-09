@@ -21,7 +21,7 @@ const FoodContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("/.netlify/functions/zerocuisineapi")
+      await fetch("https://perfect-pinafore-goat.cyclic.app/zerocuisineapi")
         .then((response) => response.json())
         .then((data) => {
           setApiData(data.restaurant);
