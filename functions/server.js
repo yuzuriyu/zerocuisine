@@ -510,12 +510,14 @@ const zerocuisineapi = {
   },
 };
 
+const port = process.env.PORT || 5000;
+
 app.use(cors());
 
 app.get("/zerocuisineapi", (req, res) => {
   res.json(zerocuisineapi);
 });
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log("server is running on port 5000");
 });
