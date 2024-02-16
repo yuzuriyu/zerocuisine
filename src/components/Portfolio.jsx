@@ -16,8 +16,6 @@ export default function Portfolio() {
     selectedFood,
   } = useContext(FoodContext);
 
-  console.log(selectedFood);
-
   const [activeCategory, setCategory] = useState("all");
 
   const selectCategory = (selectedCategory) => {

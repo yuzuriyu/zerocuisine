@@ -24,16 +24,17 @@ const FoodContextProvider = ({ children }) => {
       await fetch("https://zerocuisine-server.vercel.app/api/hello")
         .then((response) => response.json())
         .then((data) => {
-          setApiData(data.restaurant);
-          setTestimonials(data.restaurant.testimonials);
-          setStarters(data.restaurant.starters);
-          setOpenTime(data.restaurant.openTime);
-          setBlog(data.restaurant.blog);
-          setLunch(data.restaurant.lunch);
-          setDinner(data.restaurant.dinner);
-          setDrinks(data.restaurant.drinks);
-          setSweets(data.restaurant.sweets);
-          setFruits(data.restaurant.fruits);
+          console.log(data);
+          setApiData(data.zerocuisineapi.restaurant);
+          setTestimonials(data.zerocuisineapi.restaurant.testimonials);
+          setStarters(data.zerocuisineapi.restaurant.starters);
+          setOpenTime(data.zerocuisineapi.restaurant.openTime);
+          setBlog(data.zerocuisineapi.restaurant.blog);
+          setLunch(data.zerocuisineapi.restaurant.lunch);
+          setDinner(data.zerocuisineapi.restaurant.dinner);
+          setDrinks(data.zerocuisineapi.restaurant.drinks);
+          setSweets(data.zerocuisineapi.restaurant.sweets);
+          setFruits(data.zerocuisineapi.restaurant.fruits);
         });
     };
     fetchData();
@@ -53,7 +54,7 @@ const FoodContextProvider = ({ children }) => {
     selectFood,
     setSelectedFood,
   };
-
+  console.log(apiData);
   return <FoodContext.Provider value={value}>{children}</FoodContext.Provider>;
 };
 
