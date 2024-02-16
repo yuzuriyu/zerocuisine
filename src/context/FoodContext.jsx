@@ -21,7 +21,7 @@ const FoodContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("https://perfect-pinafore-goat.cyclic.app/zerocuisineapi")
+      await fetch("https://zerocuisine-server.vercel.app/api/hello")
         .then((response) => response.json())
         .then((data) => {
           setApiData(data.restaurant);
